@@ -15,7 +15,7 @@ import {
 const geraNumeroAleatorio = () => {
   let numeroAleatorio = Math.random()
 
-  numeroAleatorio = Math.floor(numeroAleatorio * 10)
+  numeroAleatorio = Math.floor(numeroAleatorio * 100)
   alert(numeroAleatorio)
 }
 
@@ -25,10 +25,10 @@ const app1NumeroAleatorio = () => {
       <Text>Gerador de número randômicos!!!</Text>
       <Button
         title="Gerar um número randômico"
-        onPress="{geraNumeroAleatorio}"
+        onPress={geraNumeroAleatorio}
       />
     </View>
-  )
+  );
 }
 
 AppRegistry.registerComponent('app1NumeroAleatorio', () => app1NumeroAleatorio);
