@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "app2-tvOS.app"
-               BlueprintName = "app2-tvOS"
-               ReferencedContainer = "container:app2.xcodeproj">
+               BuildableName = "app2FrasesDoDia-tvOS.app"
+               BlueprintName = "app2FrasesDoDia-tvOS"
+               ReferencedContainer = "container:app2FrasesDoDia.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "app2-tvOSTests.xctest"
-               BlueprintName = "app2-tvOSTests"
-               ReferencedContainer = "container:app2.xcodeproj">
+               BuildableName = "app2FrasesDoDia-tvOSTests.xctest"
+               BlueprintName = "app2FrasesDoDia-tvOSTests"
+               ReferencedContainer = "container:app2FrasesDoDia.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "app2-tvOSTests.xctest"
-               BlueprintName = "app2-tvOSTests"
-               ReferencedContainer = "container:app2.xcodeproj">
+               BuildableName = "app2FrasesDoDia-tvOSTests.xctest"
+               BlueprintName = "app2FrasesDoDia-tvOSTests"
+               ReferencedContainer = "container:app2FrasesDoDia.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "app2-tvOS.app"
-            BlueprintName = "app2-tvOS"
-            ReferencedContainer = "container:app2.xcodeproj">
+            BuildableName = "app2FrasesDoDia-tvOS.app"
+            BlueprintName = "app2FrasesDoDia-tvOS"
+            ReferencedContainer = "container:app2FrasesDoDia.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "app2-tvOS.app"
-            BlueprintName = "app2-tvOS"
-            ReferencedContainer = "container:app2.xcodeproj">
+            BuildableName = "app2FrasesDoDia-tvOS.app"
+            BlueprintName = "app2FrasesDoDia-tvOS"
+            ReferencedContainer = "container:app2FrasesDoDia.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "app2-tvOS.app"
-            BlueprintName = "app2-tvOS"
-            ReferencedContainer = "container:app2.xcodeproj">
+            BuildableName = "app2FrasesDoDia-tvOS.app"
+            BlueprintName = "app2FrasesDoDia-tvOS"
+            ReferencedContainer = "container:app2FrasesDoDia.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -4,50 +4,77 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import {
   AppRegistry,
-  StyleSheet,
   Text,
-  View
+  View,
+  Image,
+  TouchableOpacity,
+  Alert
 } from 'react-native';
 
-export default class app2 extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
+const gerarNovaFrase = () => {
+  let numeroAleatorio = Math.random()
+  numeroAleatorio = Math.floor(numeroAleatorio * 10)
+
+  // frases
+  let frases = Array();
+  frases[0] = 'Frase de impacto 1'
+  frases[1] = 'Frase de impacto 2'
+  frases[2] = 'Frase de impacto 3'
+  frases[3] = 'Frase de impacto 4'
+  frases[4] = 'Frase de impacto 5'
+  frases[5] = 'Frase de impacto 6'
+  frases[6] = 'Frase de impacto 7'
+  frases[7] = 'Frase de impacto 8'
+  frases[8] = 'Frase de impacto 9'
+  frases[9] = 'Frase de impacto 10'
+
+  let fraseEscolhida = frases[numeroAleatorio]
+
+  // alert(fraseEscolhida);
+  Alert.alert(fraseEscolhida)
 }
 
-const styles = StyleSheet.create({
-  container: {
+// Criar o component
+const app2FrasesDoDia = () => {
+  const { principal, botao, textoBotao } = Estilos
+
+  return (
+    <View style={principal}>
+
+      <Image source={require('./imgs/logo.png')} />
+
+      <TouchableOpacity
+        onPress={gerarNovaFrase}
+        style={botao}>
+        <Text style={textoBotao}>Nova frase</Text>
+      </TouchableOpacity>
+
+    </View>
+  );
+}
+
+// Formatações
+const Estilos = {
+  principal: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    alignItems: 'center'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  botao: {
+    backgroundColor: '#538530',
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    marginTop: 20
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+  textoBotao: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold'
+  }
+};
 
-AppRegistry.registerComponent('app2', () => app2);
+// Renderizar para o dispositivo
+AppRegistry.registerComponent('app2FrasesDoDia', () => app2FrasesDoDia);

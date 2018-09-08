@@ -1,4 +1,4 @@
-package com.app2;
+package com.app2frasesdodia;
 
 import android.app.Application;
 
