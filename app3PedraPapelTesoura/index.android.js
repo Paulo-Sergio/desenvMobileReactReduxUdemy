@@ -10,9 +10,10 @@ import {
   StyleSheet,
   Text,
   Button,
-  View,
-  Image
+  View
 } from 'react-native';
+import Topo from './src/components/topo';
+import Icone from './src/components/icone';
 
 export default class app3PedraPapelTesoura extends Component {
   constructor(props) {
@@ -23,50 +24,52 @@ export default class app3PedraPapelTesoura extends Component {
 
   jokenpo(escolhaUsuario) {
     // gera numero aleatorio 0, 1 ou 2
-    let numeroAleatorio = Math.floor(Math.random() * 3)
+    const numeroAleatorio = Math.floor(Math.random() * 3)
 
     let escolhaComputador = ''
     switch (numeroAleatorio) {
       case 0: escolhaComputador = 'pedra'; break;
       case 1: escolhaComputador = 'papel'; break;
       case 2: escolhaComputador = 'tesoura'; break;
+      default: escolhaComputador = '';
     }
 
     let resultado = ''
 
-    if (escolhaComputador == 'pedra') {
-      if (escolhaUsuario == 'pedra') {
+    if (escolhaComputador === 'pedra') {
+      if (escolhaUsuario === 'pedra') {
         resultado = 'Empate'
-      } else if (escolhaUsuario == 'papel') {
+      } else if (escolhaUsuario === 'papel') {
         resultado = 'Você ganhou'
-      } else if (escolhaUsuario == 'tesoura') {
+      } else if (escolhaUsuario === 'tesoura') {
         resultado = 'Você perdeu'
       }
     }
 
-    if (escolhaComputador == 'papel') {
-      if (escolhaUsuario == 'papel') {
+    if (escolhaComputador === 'papel') {
+      if (escolhaUsuario === 'papel') {
         resultado = 'Empate'
-      } else if (escolhaUsuario == 'tesoura') {
+      } else if (escolhaUsuario === 'tesoura') {
         resultado = 'Você ganhou'
-      } else if (escolhaUsuario == 'pedra') {
+      } else if (escolhaUsuario === 'pedra') {
         resultado = 'Você perdeu'
       }
     }
 
-    if (escolhaComputador == 'tesoura') {
-      if (escolhaUsuario == 'tesoura') {
+    if (escolhaComputador === 'tesoura') {
+      if (escolhaUsuario === 'tesoura') {
         resultado = 'Empate'
-      } else if (escolhaUsuario == 'pedra') {
+      } else if (escolhaUsuario === 'pedra') {
         resultado = 'Você ganhou'
-      } else if (escolhaUsuario == 'papel') {
+      } else if (escolhaUsuario === 'papel') {
         resultado = 'Você perdeu'
       }
     }
 
     this.setState({
       escolhaUsuario: escolhaUsuario,
-      escolhaComputador: escolhaComputador
+      escolhaComputador: escolhaComputador,
+      resultado: resultado
     })
   }
 
@@ -74,7 +77,7 @@ export default class app3PedraPapelTesoura extends Component {
     return (
       <View style={styles.container}>
 
-        <Topo></Topo>
+        <Topo />
 
         <View style={styles.painelAcoes}>
           <View style={styles.btnEscolha}>
@@ -90,49 +93,10 @@ export default class app3PedraPapelTesoura extends Component {
 
         <View style={styles.palco}>
           <Text style={styles.txtResultado}>{this.state.resultado}</Text>
-          <Icone escolha={this.state.escolhaComputador} jogador='Computador'></Icone>
-          <Icone escolha={this.state.escolhaUsuario} jogador='Você'></Icone>
+          <Icone escolha={this.state.escolhaComputador} jogador='Computador' />
+          <Icone escolha={this.state.escolhaUsuario} jogador='Você' />
         </View>
 
-      </View>
-    );
-  }
-}
-
-class Topo extends Component {
-  render() {
-    if (this.props.escolha == 'pedra') {
-      return (
-        <View style={styles.icone}>
-          <Text>{this.props.jogador}</Text>
-          <Image source={require('./imgs/pedra.png')} />
-        </View>
-      );
-    } else if (this.props.escolha == 'papel') {
-      return (
-        <View style={styles.icone}>
-          <Text>{this.props.jogador}</Text>
-          <Image source={require('./imgs/papel.png')} />
-        </View>
-      );
-    } else if (this.props.escolha == 'tesoura') {
-      return (
-        <View style={styles.icone}>
-          <Text>{this.props.jogador}</Text>
-          <Image source={require('./imgs/tesoura.png')} />
-        </View>
-      );
-    } else {
-      return false;
-    }
-  }
-}
-
-class Topo extends Component {
-  render() {
-    return (
-      <View>
-        <Image source={require('./imgs/jokenpo.png')} />
       </View>
     );
   }
