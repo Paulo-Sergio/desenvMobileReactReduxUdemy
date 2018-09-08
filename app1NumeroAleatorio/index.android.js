@@ -7,9 +7,9 @@
 import React from 'react';
 import {
   AppRegistry,
-  StyleSheet,
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
 
 const geraNumeroAleatorio = () => {
@@ -19,7 +19,7 @@ const geraNumeroAleatorio = () => {
   alert(numeroAleatorio)
 }
 
-const App = () => {
+const app1NumeroAleatorio = () => {
   return (
     <View>
       <Text>Gerador de número randômicos!!!</Text>
@@ -31,4 +31,4 @@ const App = () => {
   )
 }
 
-AppRegistry.registerComponent('app1', () => App);
+AppRegistry.registerComponent('app1NumeroAleatorio', () => app1NumeroAleatorio);

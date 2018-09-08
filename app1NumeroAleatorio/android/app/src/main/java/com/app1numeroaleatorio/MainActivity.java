@@ -1,4 +1,4 @@
-package com.app1;
+package com.app1numeroaleatorio;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "app1";
+        return "app1NumeroAleatorio";
     }
 }
