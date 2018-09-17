@@ -1,19 +1,21 @@
 import React from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Image } from 'react-native';
 import { connect } from 'react-redux';
 import { modificaEmail, modificaSenha, modificaNome } from '../actions/AutenticacaoActions';
 
 const formCadastro = (props) => (
-  <View style={styles.viewPrincipal}>
-    <View style={styles.viewInputs}>
-      <TextInput value={props.nome} onChangeText={texto => props.modificaNome(texto)} placeholder="Nome" style={styles.inputs} />
-      <TextInput value={props.email} onChangeText={texto => props.modificaEmail(texto)} placeholder="E-mail" style={styles.inputs} />
-      <TextInput secureTextEntry value={props.senha} onChangeText={texto => props.modificaSenha(texto)} placeholder="Senha" style={styles.inputs} />
+  <Image source={require('../imgs/bg.png')} style={{ flex: 1, width: null }}>
+    <View style={styles.viewPrincipal}>
+      <View style={styles.viewInputs}>
+        <TextInput value={props.nome} onChangeText={texto => props.modificaNome(texto)} placeholder="Nome" style={styles.inputs} placeholderTextColor='#FFF' />
+        <TextInput value={props.email} onChangeText={texto => props.modificaEmail(texto)} placeholder="E-mail" style={styles.inputs} placeholderTextColor='#FFF' />
+        <TextInput secureTextEntry value={props.senha} onChangeText={texto => props.modificaSenha(texto)} placeholder="Senha" style={styles.inputs} placeholderTextColor='#FFF' />
+      </View>
+      <View style={styles.viewButton}>
+        <Button title="Cadastrar" color="#115E54" onPress={() => false} />
+      </View>
     </View>
-    <View style={styles.viewButton}>
-      <Button title="Cadastrar" color="#115E54" onPress={() => false} />
-    </View>
-  </View>
+  </Image>
 );
 
 // mapear variavies de estado do redux, para props do componente
