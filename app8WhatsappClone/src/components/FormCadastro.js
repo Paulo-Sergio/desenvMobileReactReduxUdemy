@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TextInput, Button, StyleSheet, Image } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Image, Text } from 'react-native';
 import { connect } from 'react-redux';
 import {
   modificaEmail,
@@ -47,6 +47,8 @@ class formCadastro extends Component {
               style={styles.inputs}
               placeholderTextColor='#FFF'
             />
+
+            <Text style={{ color: '#FF0000', fontSize: 18 }}>{this.props.erroCadastro}</Text>
           </View>
           <View style={styles.viewButton}>
             <Button
@@ -67,7 +69,8 @@ const mapStateToProps = (state) => (
   {
     nome: state.AutenticacaoReducer.nome,
     email: state.AutenticacaoReducer.email,
-    senha: state.AutenticacaoReducer.senha
+    senha: state.AutenticacaoReducer.senha,
+    erroCadastro: state.AutenticacaoReducer.erroCadastro
   }
 )
 
