@@ -28,13 +28,13 @@ class formCadastro extends Component {
           <View style={styles.viewInputs}>
             <TextInput
               value={this.props.nome}
-              onChangeText={texto => props.modificaNome(texto)} placeholder="Nome"
+              onChangeText={texto => this.props.modificaNome(texto)} placeholder="Nome"
               style={styles.inputs}
               placeholderTextColor='#FFF'
             />
             <TextInput
               value={this.props.email}
-              onChangeText={texto => props.modificaEmail(texto)}
+              onChangeText={texto => this.props.modificaEmail(texto)}
               placeholder="E-mail"
               style={styles.inputs}
               placeholderTextColor='#FFF'
@@ -42,7 +42,7 @@ class formCadastro extends Component {
             <TextInput
               secureTextEntry
               value={this.props.senha}
-              onChangeText={texto => props.modificaSenha(texto)}
+              onChangeText={texto => this.props.modificaSenha(texto)}
               placeholder="Senha"
               style={styles.inputs}
               placeholderTextColor='#FFF'

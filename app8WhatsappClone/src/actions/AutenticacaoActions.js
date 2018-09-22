@@ -1,4 +1,5 @@
-import firebase from 'firebase'
+import firebase from 'firebase';
+import {Actions} from 'react-native-router-flux';
 
 export const modificaEmail = (texto) => {
   return {
@@ -31,7 +32,10 @@ export const cadastraUsuario = ({ nome, email, senha }) => {
 }
 
 const cadastroUsuarioSucesso = (dispatch) => {
-  dispatch({ type: 'sucesso' })
+  dispatch({ type: 'cadastro_usuario_sucesso' })
+
+  // navegue para a tela de boas vindas
+  Actions.boasVindas()
 }
 
 const cadastroUsuarioErro = (erro, dispatch) => {
