@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import {Actions} from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 
 export const modificaEmail = (texto) => {
   return {
