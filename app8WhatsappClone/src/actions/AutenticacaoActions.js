@@ -58,6 +58,9 @@ export const autenticarUsuario = ({ email, senha }) => {
 
 const loginUsuarioSucesso = (dispatch) => {
   dispatch({ type: 'login_usuario_sucesso' })
+
+  // navegue para a tela principal (home)
+  Actions.principal()
 }
 
 const loginUsuarioErro = (erro, dispatch) => {

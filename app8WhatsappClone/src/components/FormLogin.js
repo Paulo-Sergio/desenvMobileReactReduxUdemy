@@ -63,7 +63,9 @@ const mapStateToProps = state => (
 
 
 
-export default connect(mapStateToProps, { modificaEmail, modificaSenha, autenticarUsuario })(formLogin)
+export default connect(mapStateToProps, {
+  modificaEmail, modificaSenha, autenticarUsuario
+})(formLogin)
 
 const styles = StyleSheet.create({
   viewPrincipal: {

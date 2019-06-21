@@ -74,15 +74,9 @@ const mapStateToProps = (state) => (
   }
 )
 
-export default connect(
-  mapStateToProps,
-  {
-    modificaEmail,
-    modificaSenha,
-    modificaNome,
-    cadastraUsuario
-  }
-)(formCadastro)
+export default connect(mapStateToProps, {
+  modificaEmail, modificaSenha, modificaNome, cadastraUsuario
+})(formCadastro)
 
 const styles = StyleSheet.create({
   viewPrincipal: {
