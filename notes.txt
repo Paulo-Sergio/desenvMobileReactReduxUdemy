@@ -1,0 +1,8 @@
+# criando projeto react native com a versão do curso
+react-native init --version="0.44.0" <nome_do_app>
+
+# rodando o projeto no android
+react-native run-android
+
+# rodando o projeto no ios
+react-native run-ios
